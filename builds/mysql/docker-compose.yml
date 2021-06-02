@@ -1,0 +1,16 @@
+# mysql container for testing
+version: '3.3'
+services:
+  db:
+    image: docker.io/library/mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'go-auth-basic'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin123'
+      MYSQL_ROOT_PASSWORD: 'admin123'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+
